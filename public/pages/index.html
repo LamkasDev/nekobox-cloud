@@ -2,7 +2,7 @@
 <html class="pink-theme" lang="en">
     <head>
         <link rel="icon" href="favicon.ico?v=1.1">
-        <title>lamkas.moe</title>
+        <title>nekobox.cloud</title>
         <link rel="stylesheet" href="static/styles/default.css"/>
         <link rel="stylesheet" href="static/styles/index.css"/>
 
@@ -15,53 +15,55 @@
                     $('#panel1').css('height', '100vh').css('height', '-=0px');
                 }
 
-                document.addEventListener('click', c);
-                function c() {
-                    var number = 1 + Math.floor(Math.random() * 100);
-                    var dt = new Date();
-                    if((dt.getHours() >= 18 || dt.getHours() < 4) && number >= 0) {
-                        $('#avatar').attr("src", "");
-                        $('#panel1').css("background-image", "url('static/images/haha2.gif')");
-                        $('#box-text').text("already dead.");
-                        $('#box-text2').text("");
-                        $('#discord').text("");
-                        $('#github').text("");
-                        $('#nekomaid').text("");
-                        $('#server').text("");
-                        $('#box').text("");
-                        document.getElementById('player').play();
-                        document.removeEventListener('click', onClick);
-                    }
-                }
+                $('#avatar').click(function() {
+                    window.location.href = "/";
+                });
+
+                $('#register').click(function() {
+                    window.location.href = "register";
+                });
+
+                $('#login').click(function() {
+                    window.location.href = "login";
+                });
+
+                $('#drive').click(function() {
+                    window.location.href = "drive";
+                });
+
+                $('#logout').click(function() {
+                    window.location.href = "logout";
+                });
             });
         </script>
     </head>
 
-
     <div class="container">
-        <audio id="player" loop>
-            <source src="static/audio/happy.mp3" type="audio/mp3">
-        </audio>
-
         <body class="content">
-            <div class="panel1" id="panel1" style="background-image: url('static/images/bg.jpg'); background-size: cover;">
-                <div class="box">
-                    <img id="avatar" src="static/images/ico.png" style="width: 128px; height: 128px;" class="avatar">
-                    <div class="box-text-wrapper">
-                        <p id="box-text" class="box-text" style="margin-top: 10px;">i'm lamkas.</p>
-                        <p id="box-text2" class="box-text2">i sometimes do stuff and it works.</p>
-                        <p id="discord" class="box-text3"><img src="static/images/discord.png" style="width: 25px; height: 25px;"> - LamkasDev#4235</p>
-                        <p id="github" class="box-text3" style="cursor: pointer;" onclick="window.open('https://github.com/LamkasDev','_blank')"><img src="static/images/github.png" style="width: 25px; height: 25px; cursor: pointer;" onclick="window.open('https://github.com/LamkasDev','_blank')"> - LamkasDev</p>
-                        <p id="nekomaid" class="box-text3" style="cursor: pointer;" onclick="window.open('https://nekomaid.xyz','_blank')"><img src="static/images/bot.png" style="width: 25px; height: 25px; cursor: pointer; border-radius: 50%;" onclick="window.open('https://github.com/LamkasDev','_blank')"> - Nekomaid</p>
-                        <p id="server" class="box-text3" style="cursor: pointer;" onclick="window.open('https://nekonetwork.net','_blank')"><img src="static/images/server.png" style="width: 25px; height: 25px; cursor: pointer;" onclick="window.open('https://nekonetwork.net','_blank')"> - nekonetwork:25577</p>
-                        <p id="box" class="box-text3" style="cursor: pointer;" onclick="window.open('https://nekobox.cloud','_blank')"><img src="static/images/box.png" style="width: 25px; height: 25px; cursor: pointer;" onclick="window.open('https://nekobox.cloud','_blank')"> - Nekobox.cloud (soon™️)</p>
-						<p id="box" class="box-text3" style="margin-top: 10px; font-size: 12px; text-align: left;">
-							> Experience - HTML + CSS, JS, C#, Java<br>
-							> Minor - PHP, Python
-						</p>
-					</div>
+            <div class="panel1" id="panel1">
+                <div class="panel-wrapper">
+                    <div class="box">
+                        <img id="avatar" src="static/images/box.png" style="width: 128px; height: 128px;" class="avatar">
+                    </div>
+                    <div class="box-text" style="margin-top: 10px;">nekobox.cloud</div>
+                    <div id="loginSection">
+                        <div class="panel-wrapper" style="display: flex; justify-content: center; margin-top: 5px;">
+                            <div id="login" class="login-text" style="font-size: 16px; border: 1px solid currentColor; border-radius: 5px; padding: 3px;">login</div>
+                        </div>
+                        <div class="panel-wrapper" style="display: flex; justify-content: center;">
+                            <div id="register" class="login-text" style="font-size: 16px; border: 1px solid currentColor; border-radius: 5px; padding: 3px;">register</div>
+                        </div>
+                    </div>
+                    <div id="accountSection">
+                        <div class="panel-wrapper" style="display: flex; justify-content: center; margin-top: 5px;">
+                            <div id="drive" class="login-text" style="font-size: 16px; border: 1px solid currentColor; border-radius: 5px; padding: 3px;">drive</div>
+                        </div>
+                        <div class="panel-wrapper" style="display: flex; justify-content: center; margin-top: 5px;">
+                            <div id="logout" class="login-text" style="font-size: 16px; border: 1px solid currentColor; border-radius: 5px; padding: 3px;">logout</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </body>
     </div>
-</bothtml>
+</html>

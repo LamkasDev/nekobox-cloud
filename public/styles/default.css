@@ -4,6 +4,10 @@
     font-display: swap;
 }
 
+.pink-theme {
+    background-color: #ffdcdc;
+}
+
 .content {
     flex: 1 1 auto;
     margin: 0;
@@ -12,18 +16,19 @@
 .panel1 {
     justify-content: center;
     height: 100vh;
-    display: flex;
 }
 
 .avatar {
     background-color: white;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .box {
     display: flex;
     height: 128px;
     margin-top: 12%;
+    justify-content: center;
 }
 
 .box-text-wrapper {
@@ -32,9 +37,34 @@
 
 .box-text {
     font-family: "uwuFont";
-    color: white;
+    color: #292929;
     font-size: 20px;
     margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-text {
+    font-family: "uwuFont";
+    color: #292929;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid currentColor;
+    width: 100px;
+    cursor: pointer;
+}
+
+.error-text {
+    font-family: "uwuFont";
+    color: red;
+    font-size: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 400px;
 }
 
 .box-text2 {
@@ -57,4 +87,80 @@
     display: flex;
     align-items: center;
     margin-bottom: 1px;
+}
+
+.inputfield {
+    background-color: white;
+    border: 1px solid #ff94a7;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.inputfield:focus {
+    outline: none;
+}
+
+.drivespace {
+  display: block;
+  padding: 1px;
+  background: #292929;
+}
+
+.drivespace::-webkit-progress-value {
+    background-color: #cf68d6;
+}
+
+.drivespace::-webkit-progress-bar {
+    background-color: white;
+}
+
+.folder {
+    font-family: "uwuFont";
+    color: black;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.empty {
+    visibility: hidden;
+}
+
+.context-menu {
+    display: none;
+    background-color: #ffc8d2;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "uwuFont";
+    color: #ff8282;
+}
+
+.action-text {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.recentUploads {
+    width: 400px;
+    height: 150px;
+    background-color: #ffa8a8;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.box-text4 {
+    font-family: "uwuFont";
+    color: #292929;
+    font-size: 20px;
+    margin-top: 10px;
+    font-size: 17px;
+    margin-left: 10px;
 }
